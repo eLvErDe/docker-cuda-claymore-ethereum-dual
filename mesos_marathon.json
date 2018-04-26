@@ -1,0 +1,21 @@
+{
+  "id": "/mining/cuda-claymore-ethereum-dual",
+  "cmd": "/root/claymore/ethdcrminer64 -epool eu1.ethermine.org:4444 -ewal 0x5d8dd9ec9e16b39b5fb1f805b58b3ce5a572a2dd -eworker rig1 -colors 0 -mport $PORT0",
+  "cpus": 0.5,
+  "gpus": 1,
+  "mem": 512,
+  "disk": 500,
+  "ports": [ 0 ],
+  "instances": 1,
+  "container": {
+    "type": "MESOS",
+    "docker": {
+      "image": "acecile/cuda-claymore-ethereum-dual",
+      "forcePullImage": true
+    }
+  },
+  "upgradeStrategy": {
+    "maximumOverCapacity": 0,
+    "minimumHealthCapacity": 0
+  }
+}
